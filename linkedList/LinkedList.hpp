@@ -41,14 +41,14 @@ bool LinkedList<T>::search(T value) const
 
 	while(temp!=nullptr)
 	{
-		if (temp->getValue()=value) {
+		if (temp->getValue()==value) {
 			isFound = true;
 			break;
 		}else{
 			temp=temp->getNext();
 		}
 	}
-	
+
 	return(isFound);
 }
 
@@ -112,11 +112,12 @@ bool LinkedList<T>::removeBack()
 if(!isEmpty())
 {
 	while(temp->getNext()!=nullptr){
-	 temp2 =temp;
+	temp2 =temp;
 	temp= temp->getNext();
 
 }
 	delete temp;
+	m_size--;
 	temp2->setNext(nullptr);
 	isRemoved=true;
 }
