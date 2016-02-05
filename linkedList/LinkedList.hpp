@@ -118,7 +118,7 @@ if(!isEmpty())
 	delete temp;
 	temp2->setNext(nullptr);
 	isRemoved=true;
-
+}
 
 	
 	return(isRemoved);
